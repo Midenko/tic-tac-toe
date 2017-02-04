@@ -10,7 +10,10 @@ class TicTacToe {
     }
 
     nextTurn(rowIndex, columnIndex) {
-        this.field[rowIndex][columnIndex] = this.getCurrentPlayerSymbol();
+        if (this.field[rowIndex][columnIndex] === null) {
+            this.field[rowIndex][columnIndex] = this.getCurrentPlayerSymbol();
+            this.count++;
+        }
     }
 
     isFinished() {
