@@ -17,25 +17,26 @@ class TicTacToe {
     }
 
     isFinished() {
-
-    }
-
-    getWinner() {
-
-    }
-
-    noMoreTurns() {
-        for (i = 0; i < 3; i++) {
-            for (j = 0; j < 3; j++) {
-                if (this.field[i][j] === null) return true;
-            }
-        }
-
+        if (this.isDraw() || this.getWinner()) return true;
         return false;
     }
 
+    getWinner() {
+        if (this.field[0][0] === null && this.field[1][1] === null && this.field[2][2] === null) return null;
+    }
+
+    noMoreTurns() {
+        for (var i = 0; i < 3; i++) {
+            for (var j = 0; j < 3; j++) {
+                if (this.field[i][j] === null) return false;
+            }
+        }
+
+        return true;
+    }
+
     isDraw() {
-        if (this.noMoreTurns && !this.getWinner) return true;
+        if (this.noMoreTurns() && !this.getWinner()) return true;
         return false;
     }
 
