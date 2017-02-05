@@ -29,13 +29,11 @@ class TicTacToe {
             winner = this.field[0][0]
             if (this.field[0][2] == winner) {
                 if(this.field[0][1] == winner) {
-                    //this.count = 0;
                     return winner;
                 }
             }
-            else if (this.field[2][0] == winner) {
+            if (this.field[2][0] == winner) {
                 if (this.field[1][0] == winner) {
-                    //this.count = 0;
                     return winner;
                 }
             }
@@ -45,25 +43,22 @@ class TicTacToe {
             winner = this.field[1][1];
             if (this.field[0][0] == winner) {
                 if(this.field[2][2] == winner) {
-                    //this.count = 0;
                     return winner;
                 }
             }
-            else if (this.field[0][2] == winner) {
+            if (this.field[0][2] == winner) {
                 if (this.field[2][0] == winner) {
-                    //this.count = 0;
                     return winner;
                 }
             }
-            else if (this.field[0][1] == winner) {
+            if (this.field[0][1] == winner) {
                 if (this.field[2][1] == winner) {
-                    //this.count = 0;
                     return winner;
                 }
             }
-            else if (this.field[1][0] == winner) {
+            
+            if (this.field[1][0] == winner) {
                 if (this.field[1][2] == winner) {
-                    //this.count = 0;
                     return winner;
                 }
             }
@@ -73,13 +68,11 @@ class TicTacToe {
             winner = this.field[2][2];
             if (this.field[0][2] == winner) {
                 if(this.field[1][2] == winner) {
-                    //this.count = 0;
                     return winner;
                 }
             }
-            else if (this.field[2][0] == winner) {
+            if (this.field[2][0] == winner) {
                 if (this.field[2][1] == winner) {
-                    //this.count = 0;
                     return winner;
                 }
             }
