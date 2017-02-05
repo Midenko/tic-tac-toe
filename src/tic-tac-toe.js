@@ -93,7 +93,7 @@ class TicTacToe {
     }
 
     isDraw() {
-        if (this.noMoreTurns() && this.getWinner != null) return true;
+        if (this.noMoreTurns() && this.getWinner() != 0) return true;
         return false;
     }
 
