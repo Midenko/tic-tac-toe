@@ -93,10 +93,9 @@ class TicTacToe {
             for (var j = 0; j < 3; j++) {
                 if (this.field[i][j] === null) return false;
             }
-        } else {
-            this.count = 0;
-            return true;
         }
+        this.count = 0;
+        return true;
     }
 
     isDraw() {
