@@ -31,7 +31,7 @@ class TicTacToe {
                 if(this.field[0][1] == winner) return winner;
             }
             else if (this.field[2][0] == winner) {
-                if (this.field[1][0]) == winner) return winner;
+                if (this.field[1][0] == winner) return winner;
             }
         }
 
@@ -41,13 +41,13 @@ class TicTacToe {
                 if(this.field[2][2] == winner) return winner;
             }
             else if (this.field[0][2] == winner) {
-                if (this.field[2][0]) == winner return winner;
+                if (this.field[2][0] == winner) return winner;
             }
             else if (this.field[0][1] == winner) {
-                if (this.field[2][1]) == winner return winner;
+                if (this.field[2][1] == winner) return winner;
             }
             else if (this.field[1][0] == winner) {
-                if (this.field[1][2]) == winner) return winner;
+                if (this.field[1][2] == winner) return winner;
             }
         }
 
@@ -57,7 +57,7 @@ class TicTacToe {
                 if(this.field[1][2] == winner) return winner;
             }
             else if (this.field[2][0] == winner) {
-                if (this.field[2][1]) == winner) return winner;
+                if (this.field[2][1] == winner) return winner;
             }
         }
 
