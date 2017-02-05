@@ -22,7 +22,47 @@ class TicTacToe {
     }
 
     getWinner() {
+        var winner = null;
         if (this.field[0][0] === null && this.field[1][1] === null && this.field[2][2] === null) return null;
+
+        else if (!this.field[0][0]) {
+            winner = this.field[0][0];
+            if (this.field[0][2] == winner) {
+                if(this.field[0][1] == winner) return winner;
+            }
+            else if (this.field[2][0] == winner) {
+                if (this.field[1][0]) == winner) return winner;
+            }
+        }
+
+        else if(!this.field[1][1]) {
+            winner = this.field[1][1];
+            if (this.field[0][0] == winner) {
+                if(this.field[2][2] == winner) return winner;
+            }
+            else if (this.field[0][2] == winner) {
+                if (this.field[2][0]) == winner return winner;
+            }
+            else if (this.field[0][1] == winner) {
+                if (this.field[2][1]) == winner return winner;
+            }
+            else if (this.field[1][0] == winner) {
+                if (this.field[1][2]) == winner) return winner;
+            }
+        }
+
+        else if(!this.field[2][2]) {
+            winner = this.field[2][2];
+            if (this.field[0][2] == winner) {
+                if(this.field[1][2] == winner) return winner;
+            }
+            else if (this.field[2][0] == winner) {
+                if (this.field[2][1]) == winner) return winner;
+            }
+        }
+
+        else return null;
+
     }
 
     noMoreTurns() {
