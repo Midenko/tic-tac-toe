@@ -25,11 +25,18 @@ class TicTacToe {
     }
 
     noMoreTurns() {
+        for (i = 0; i < 3; i++) {
+            for (j = 0; j < 3; j++) {
+                if (this.field[i][j] === null) return true;
+            }
+        }
 
+        return false;
     }
 
     isDraw() {
-
+        if (this.noMoreTurns && !this.getWinner) return true;
+        return false;
     }
 
     getFieldValue(rowIndex, colIndex) {
