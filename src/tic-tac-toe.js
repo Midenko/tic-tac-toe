@@ -70,6 +70,7 @@ class TicTacToe {
         }
 
         if(this.field[2][2] != null) {
+            winner = this.field[2][2];
             if (this.field[0][2] == winner) {
                 if(this.field[1][2] == winner) {
                     this.count = 0;
@@ -109,3 +110,4 @@ class TicTacToe {
 }
 
 module.exports = TicTacToe;
+
