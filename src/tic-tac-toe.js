@@ -25,7 +25,7 @@ class TicTacToe {
         var winner = null;
         if (this.field[0][0] === null && this.field[1][1] === null && this.field[2][2] === null) return null;
 
-        if (this.field[0][0] != null) {
+        if (this.field[0][0] !== null) {
             winner = this.field[0][0]
             if (this.field[0][2] == winner) {
                 if(this.field[0][1] == winner) {
@@ -39,7 +39,7 @@ class TicTacToe {
             }
         }
 
-        if(this.field[1][1] != null) {
+        if(this.field[1][1] !== null) {
             winner = this.field[1][1];
             if (this.field[0][0] == winner) {
                 if(this.field[2][2] == winner) {
@@ -64,7 +64,7 @@ class TicTacToe {
             }
         }
 
-        if(this.field[2][2] != null) {
+        if(this.field[2][2] !== null) {
             winner = this.field[2][2];
             if (this.field[0][2] == winner) {
                 if(this.field[1][2] == winner) {
