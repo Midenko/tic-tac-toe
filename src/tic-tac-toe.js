@@ -88,7 +88,6 @@ class TicTacToe {
                 if (this.field[i][j] === null) return false;
             }
         }
-        this.count = 0;
         return true;
     }
 
